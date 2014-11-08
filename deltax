@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int deltax(int a, int b, int n);
+
+//int main()
+//{
+//      int a = 1;
+//      int b = 90;
+//      int n = 5;
+//      int delt = 0;
+//      delt = deltax(a,b,n);
+//      cout << "this is the result: " << delt << endl;
+//      return 0;
+//}
+//input: lower bound, upper bound, and how many boxes
+//output: change in x
+//pre-conditions: a, b, and n have to be integers
+//post-conditions: change in x is a rounded integer
+int deltax(int a, int b, int n)
+{
+        float x  = 0.0;//this is for rounding
+        int delt = 0;
+        x  = (b-a) / (n * 1.0);//this gets a decimal approximation
+        delt = round(x);//this rounds it to a whole number
+        return delt;
+}
